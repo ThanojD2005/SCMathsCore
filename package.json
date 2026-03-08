@@ -1,0 +1,42 @@
+{
+    "name": "scmathscore-lms",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.3",
+        "firebase": "^12.7.0",
+        "jspdf": "^4.0.0",
+        "jspdf-autotable": "^5.0.7",
+        "lucide-react": "^0.562.0",
+        "media-chrome": "^4.18.0",
+        "qrcode.react": "^4.2.0",
+        "react": "^18.3.1",
+        "react-bootstrap": "^2.10.4",
+        "react-dom": "^18.3.1",
+        "react-player": "^3.4.0",
+        "react-router-dom": "^7.12.0",
+        "screenfull": "^6.0.2",
+        "youtube-video-element": "^1.8.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.9.0",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "@vitejs/plugin-react": "^4.3.1",
+        "concurrently": "^9.2.1",
+        "eslint": "^9.9.0",
+        "eslint-plugin-react": "^7.35.0",
+        "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+        "eslint-plugin-react-refresh": "^0.4.9",
+        "globals": "^15.9.0",
+        "sass": "^1.77.8",
+        "vite": "^5.4.1"
+    }
+}
