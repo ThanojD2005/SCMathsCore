@@ -784,18 +784,20 @@ const StudentDashboard = ({ user, userData }) => {
                                                 <User size={50} color="white" strokeWidth={1.5} />
                                             </div>
                                         </div>
-                                        {/* Badge */}
-                                        <div
-                                            className="position-absolute bottom-0 end-0 rounded-circle d-flex align-items-center justify-content-center shadow-lg"
-                                            style={{
-                                                width: "28px",
-                                                height: "28px",
-                                                backgroundColor: "#10b981",
-                                                border: "2px solid #0f172a",
-                                            }}
-                                        >
-                                            <Shield size={14} color="white" />
-                                        </div>
+                                        {/* Badge conditionally rendered */}
+                                        {userData?.status === 'verified' && (
+                                            <div
+                                                className="position-absolute bottom-0 end-0 rounded-circle d-flex align-items-center justify-content-center shadow-lg"
+                                                style={{
+                                                    width: "28px",
+                                                    height: "28px",
+                                                    backgroundColor: "#10b981",
+                                                    border: "2px solid #0f172a",
+                                                }}
+                                            >
+                                                <Shield size={14} color="white" />
+                                            </div>
+                                        )}
                                     </div>
 
                                     {/* Name and Status */}
@@ -804,8 +806,15 @@ const StudentDashboard = ({ user, userData }) => {
                                             {studentName}
                                         </h3>
                                         <p className="text-secondary small fw-medium text-uppercase tracking-wider mb-0 d-flex align-items-center justify-content-center justify-content-sm-start gap-1">
-                                            <UserCheck size={14} className="text-success" /> Verified
-                                            Student
+                                            {userData?.status === 'verified' ? (
+                                                <>
+                                                    <UserCheck size={14} className="text-success" /> Verified Student
+                                                </>
+                                            ) : (
+                                                <>
+                                                    <Info size={14} className="text-warning" /> Pending Verification
+                                                </>
+                                            )}
                                         </p>
                                     </div>
                                 </div>
@@ -1220,13 +1229,10 @@ const StudentDashboard = ({ user, userData }) => {
                             <Col md={6}>
                                 <Reveal delay={200}>
                                     <div
-                                        className="nav-card"
+                                        className="nav-card nav-card-live"
                                         onClick={() => navigate("/live-classes")}
                                     >
-                                        <div
-                                            className="nav-card-icon"
-                                            style={{ color: "var(--accent-red)" }}
-                                        >
+                                        <div className="nav-card-icon">
                                             <Radio size={32} />
                                         </div>
                                         <div>

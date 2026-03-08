@@ -182,6 +182,21 @@ h4 {
   transform: scale(1.1) rotate(5deg);
 }
 
+.nav-card-live:hover {
+  border-color: var(--accent-red);
+}
+
+.nav-card-live .nav-card-icon {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: var(--accent-red);
+}
+
+.nav-card-live:hover .nav-card-icon {
+  background-color: var(--accent-red);
+  color: white;
+}
+
 /* Latest Classes Section */
 .latest-classes-section {
   background-color: var(--bg-secondary);
