@@ -636,18 +636,18 @@ const StudentDashboard = ({ user, userData }) => {
                         </>
                     ) : (
                         <div
-                            className="d-flex gap-2"
+                            className="d-flex gap-1 gap-sm-2"
                             style={{ position: "relative", zIndex: 1005 }}
                         >
                             <Link
                                 to="/login"
-                                className="btn-minimal btn-minimal-outline border-1 py-2 px-4 shadow-none text-decoration-none"
+                                className="btn-minimal btn-minimal-outline border-1 shadow-none text-decoration-none"
                             >
                                 Login
                             </Link>
                             <Link
                                 to="/signup"
-                                className="btn-minimal btn-minimal-primary py-2 px-4 shadow-none text-decoration-none"
+                                className="btn-minimal btn-minimal-primary shadow-none text-decoration-none"
                             >
                                 Sign Up
                             </Link>
